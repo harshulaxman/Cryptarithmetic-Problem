@@ -1,6 +1,6 @@
 <h1>ExpNo 8 : Solve Cryptarithmetic Problem,a CSP(Constraint Satisfaction Problem) using Python</h1> 
-<h3>Name:               </h3>
-<h3>Register Number/Staff Id:       </h3>
+<h3>Name: HARSSHITHA LAKSHMANAN   </h3>
+<h3>Register Number: 212223230075      </h3>
 <H3>Aim:</H3>
 <p>
     To solve Cryptarithmetic Problem,a CSP(Constraint Satisfaction Problem) using Python
@@ -78,5 +78,30 @@ MORE = 1085<br>
 <hr>
 MONEY = 10652<br>
 <hr>
+<h2>Program:</h2>
+
+```
+from itertools import permutations
+for perm in permutations(range(10),9):
+    C,R,O,S,D,A,N,G,E = perm
+    if C==0 or R==0  or D==0:
+        continue
+    else:
+        CROSS = C*10000+R*1000+O*100+S*10+S
+        ROADS = R*10000+O*1000+A*100+D*10+S
+        DANGER = D*100000+A*10000+N*1000+G*100+E*10+R
+        if CROSS+ROADS == DANGER:
+            print("CROSS-> {}".format(CROSS))
+            print("ROADS-> {}".format(ROADS))
+            print("DANGER-> {}".format(DANGER))
+            print("C->{},R->{},O->{},S->{},A->{},N->{},G->{},E->{}".format(C,R,O,S,D,A,N,G,E))
+"CROSS+ROADS = DANGER C,R,O,S,W,D,A,N,G,E"
+
+```
+<hr>
+<h2>Output</h2>
+<img width="549" height="231" alt="image" src="https://github.com/user-attachments/assets/6ff4e547-344e-494a-81c6-c1f100afea28" />
+
+
 <h2>Result:</h2>
 <p> Thus a Cryptarithmetic Problem was solved using Python successfully</p>
